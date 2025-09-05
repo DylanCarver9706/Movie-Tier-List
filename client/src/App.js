@@ -51,6 +51,7 @@ function GlobalAppBar({ tierList, onTierListUpdate }) {
   const location = useLocation();
   const isTierListPage = location.pathname.startsWith("/tierlist/");
   const [isEditingTitle, setIsEditingTitle] = useState(false);
+  const [editingTitle, setEditingTitle] = useState("");
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: "",
@@ -78,17 +79,18 @@ function GlobalAppBar({ tierList, onTierListUpdate }) {
   };
 
   const handleTitleChange = (event) => {
-    const newName = event.target.value;
-    if (onTierListUpdate) {
-      onTierListUpdate({ name: newName });
-    }
+    setEditingTitle(event.target.value);
   };
 
   const handleEditTitle = () => {
+    setEditingTitle(tierList?.name || "");
     setIsEditingTitle(true);
   };
 
   const handleTitleSubmit = () => {
+    if (onTierListUpdate && editingTitle.trim()) {
+      onTierListUpdate({ name: editingTitle.trim() });
+    }
     setIsEditingTitle(false);
   };
 
@@ -114,7 +116,7 @@ function GlobalAppBar({ tierList, onTierListUpdate }) {
                 <Box className="flex items-center gap-2">
                   <TextField
                     variant="standard"
-                    value={tierList.name}
+                    value={editingTitle}
                     onChange={handleTitleChange}
                     autoFocus
                     sx={{ width: "25%" }}
