@@ -45,6 +45,11 @@ app.use((req, res, next) => {
 
 // Routes
 
+// Health check endpoint
+app.get("/", (req, res) => {
+  res.json({ message: "Hello World!" });
+});
+
 // Create a new tier list
 app.post("/api/tierlists", async (req, res) => {
   try {
