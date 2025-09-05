@@ -77,9 +77,9 @@ const HomePage = () => {
     },
     {
       icon: <StarIcon sx={{ fontSize: 40, color: "#f59e0b" }} />,
-      title: "Custom Tier Rankings",
+      title: "Classic Tier Rankings",
       description:
-        "Create personalized tier lists from S-Tier to F-Tier. Organize your movies exactly how you want with drag-and-drop functionality.",
+        "Create personalized tier lists from S-Tier to F-Tier. Organize your movies exactly how you want no matter your preferences.",
       cta: "Create Your Tiers",
     },
     {
