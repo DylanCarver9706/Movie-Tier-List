@@ -1,0 +1,24 @@
+{
+    "name": "movie-tier-list",
+    "version": "1.0.0",
+    "description": "A movie tier list application with React frontend and Express backend",
+    "main": "server/index.js",
+    "scripts": {
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "cd server && npm run dev",
+        "client": "cd client && npm start",
+        "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+    },
+    "keywords": [
+        "movie",
+        "tier-list",
+        "react",
+        "express",
+        "mongodb"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}

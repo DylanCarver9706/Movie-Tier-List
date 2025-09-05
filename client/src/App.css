@@ -1,0 +1,50 @@
+/* App.css - Additional styles for the Movie Tier List app */
+
+.App {
+  text-align: center;
+}
+
+/* Custom styles for drag and drop */
+.drag-handle {
+  cursor: move;
+}
+
+/* Tier list specific styles */
+.tier-section {
+  min-height: 120px;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.tier-section.drag-over {
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+}
+
+/* Movie card styles */
+.movie-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card.dragging {
+  opacity: 0.5;
+  transform: rotate(5deg);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .tier-section {
+    padding: 12px;
+  }
+
+  .movie-card {
+    width: 100px;
+    height: 160px;
+  }
+}
