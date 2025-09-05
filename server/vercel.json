@@ -22,7 +22,7 @@
                 },
                 {
                     "key": "Access-Control-Allow-Origin",
-                    "value": "https://www.thisisrocketleague.com"
+                    "value": "https://movie-tier-list-client.vercel.app"
                 },
                 {
                     "key": "Access-Control-Allow-Methods",
